@@ -1,4 +1,4 @@
-package org.rsmtask;
+package com.rsm.homework.duplicates;
 
 import java.util.Scanner;
 

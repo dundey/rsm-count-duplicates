@@ -1,4 +1,4 @@
-package org.rsmtask;
+package com.rsm.homework.duplicates;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -105,6 +105,7 @@ class DuplicateCounterTest {
     // Invalid Input Handling (Constraint Violations)
     // ========================================================================
     @Test
+    @SuppressWarnings("ConstantConditions")
     void countDuplicates_WithNullArray_ThrowsNullPointerException() {
         assertThrows(NullPointerException.class,
                 () -> DuplicateCounter.countDuplicates(null),
