@@ -1,14 +1,14 @@
 # RSM Count Duplicates
 
-A lightweight Java utility to count duplicate values in integer arrays.  
+A lightweight Java utility to count duplicate integers in arrays.  
 **Key Features**:
 - ✅ Handles arrays of 1-1000 elements (values 1-1000)
-- ✅ Comprehensive test suite (15+ scenarios)
+- ✅ 15+ JUnit 5 test cases covering edge scenarios
 - ✅ Input validation and error handling
 
 ---
 
-## Quick Start (Terminal Only)
+## Quick Start
 
 ### Prerequisites
 - **Java 8+** (check: `java -version`)
@@ -16,8 +16,8 @@ A lightweight Java utility to count duplicate values in integer arrays.
 
 ### 1. Clone & Build
 ```bash
-git clone https://github.com/dundey/RSM-count-duplicates.git
-cd RSM-count-duplicates
+git clone https://github.com/dundey/rsm-count-duplicates.git
+cd rsm-count-duplicates
 mvn clean package
 ```
 
@@ -30,7 +30,7 @@ mvn test
 ```text
 .
 ├── src/
-│   ├── main/java/org/rsmtask/     # Production code
-│   └── test/java/org/rsmtask/     # JUnit tests
-├── pom.xml                        # Maven config
-└── README.md                      # This files file
+│   ├── main/java/org/rsmtask/     # Core logic
+│   └── test/java/org/rsmtask/     # JUnit 5 tests
+├── pom.xml                        # Maven configuration
+└── README.md                      # Documentation  
