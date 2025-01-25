@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.rsmtask</groupId>
-    <artifactId>rsm-count-duplicates</artifactId>
+    <artifactId>rsm-homework-task</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

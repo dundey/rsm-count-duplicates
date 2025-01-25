@@ -1,4 +1,4 @@
-# RSM Count Duplicates
+# Task 1 - Count Duplicates
 
 A lightweight Java utility to count duplicate integers in arrays.  
 **Key Features**:
@@ -16,8 +16,8 @@ A lightweight Java utility to count duplicate integers in arrays.
 
 ### 1. Clone & Build
 ```bash
-git clone https://github.com/dundey/rsm-count-duplicates.git
-cd rsm-count-duplicates
+git clone https://github.com/dundey/rsm-homework-task.git
+cd rsm-homework-task
 mvn clean package
 ```
 
