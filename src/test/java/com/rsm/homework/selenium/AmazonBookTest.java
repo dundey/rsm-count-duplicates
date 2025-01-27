@@ -70,8 +70,8 @@ public class AmazonBookTest {
         // Verify it's the Paperback edition
         Assertions.assertTrue(productPage.isPaperbackEdition(), "Not paperback edition on Product Page");
 
-        // Add to basket and mark as gift
-        productPage.addToBasket().markAsGift();
+        // Mark as gift and add to basket
+        productPage.markAsGift().addToBasket();
 
         // Proceed to Cart Page
         CartPage cartPage = productPage.goToCart().waitForCartPageToLoad();
@@ -82,14 +82,17 @@ public class AmazonBookTest {
         // Verify cart item price
         Assertions.assertEquals(paperbackPrice, cartPage.getCartItemPrice(), "Cart price mismatch");
 
-//        // Verify edition is Paperback in cart
-//        Assertions.assertTrue(cartPage.isPaperbackInDescription(), "Edition in cart not paperback");
-//
-//        // Verify item is marked as gift
-//        Assertions.assertTrue(cartPage.isGiftMarked(), "Item not marked as gift");
-//
-//        // Verify the number of items in the cart
-//        Assertions.assertEquals(1, cartPage.getNumberOfItems(), "Cart should have 1 item");
+        // Verify edition is Paperback in cart
+        Assertions.assertTrue(cartPage.isPaperbackInDescription(), "Edition in cart not paperback");
+
+        // Verify item is marked as gift
+        Assertions.assertTrue(cartPage.isGiftMarked(), "Item not marked as gift");
+
+        // Verify the number of items in the cart
+        Assertions.assertEquals(1, cartPage.getNumberOfItems(), "Cart should have 1 item");
+
+        // Verify the item is in stock
+        Assertions.assertTrue(cartPage.isInStock(), "Item is not in stock");
     }
 
     @AfterEach

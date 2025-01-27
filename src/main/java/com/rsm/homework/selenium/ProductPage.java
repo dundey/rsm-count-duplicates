@@ -10,15 +10,14 @@ public class ProductPage extends BasePage {
     private final By productSubtitle    = By.id("productSubtitle");
     private final By paperbackPrice     = By.cssSelector("#tmm-grid-swatch-PAPERBACK .slot-price .a-size-base.a-color-price");
     private final By addToCartButton    = By.id("add-to-cart-button");
-    private final By giftCheckbox       = By.name("is-gift");
+    private final By giftCheckbox       = By.id("gift-wrap");
 
     public ProductPage(WebDriver driver) {
         super(driver);
     }
 
-    public ProductPage waitForProductPageToLoad() {
+    public void waitForProductPageToLoad() {
         waitForElementVisible(productTitle);
-        return this;
     }
 
     public String getProductTitle() {
