@@ -26,27 +26,7 @@ mvn test
 
 # Run specific task tests
 ```bash
-mvn test -Dtest="*Duplicate*Test"       # Task 1 (unit tests)
-mvn test -Dtest="*Selenium*Test"        # Task 2 (E2E tests)
-mvn test -Dtest="*Threads*Test"     # Task 3 (performance tests)
+mvn test -Dtest="*DuplicateCounterTest"              # Task 1: Duplicate Counter (Unit Tests)
+mvn test -Dtest="*AmazonBookTest"                    # Task 2: Amazon Books (E2E Tests)
+mvn test -Dtest="*MockServicePerformanceTest"        # Task 3: Performance Testing
 ```
-
-## Project Structure
-```text
-.
-rsm-homework-task/
-├── src/
-│   ├── main/java/com/rsm/homework/
-│   │   ├── duplicates/                         # Task 1: Count Duplicates
-│   │   │   └── DuplicateCounter.java           # TODO
-│   │   ├── selenium/                           # Task 2: Amazon Books
-│   │   └── threads/                            # Task 3: Performance Test
-│   │       └── MockService.java                # Mock service for performance testing
-│   └── test/java/com/rsm/homework/
-│       ├── duplicates/                         # Unit Tests
-│       │   └── DuplicateCounterTest .java      # TODO
-│       ├── selenium/                           # E2E Tests
-│       └── threads/                            # Performance Tests
-│           └── MockServicePerformanceTest.java # Performance test
-├── pom.xml
-└── README.md
