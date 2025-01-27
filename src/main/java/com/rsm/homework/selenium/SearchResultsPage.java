@@ -6,22 +6,22 @@ import org.openqa.selenium.WebElement;
 
 public class SearchResultsPage extends BasePage {
 
-    // We locate the first listing
+    // Locate the first search result container
     private By firstSearchResultContainer = By.xpath("(//div[@data-component-type='s-search-result'])[1]");
 
-    // Title is scoped inside the first listing (relative xpath: .//...)
+    // Title is scoped inside the first listing
     private By titleLink = By.xpath(".//div[@data-cy='title-recipe']//h2[@class='a-size-medium a-spacing-none a-color-base a-text-normal']/span");
 
-    // Rating stars also scoped to the same container
+    // Selector for rating stars within the first result
     private By ratingStars = By.xpath(".//a[contains(@aria-label, 'out of 5 stars')]");
 
-    // Paperback link is inside the same container
+    // Selector for the Paperback link within the first result
     private By paperbackLink = By.xpath(".//a[contains(text(),'Paperback')]");
 
-    // Paperback price is found near the "Paperback" link
+    // Selector for the Paperback price within the first result
     private By paperbackPrice = By.xpath(".//a[contains(text(),'Paperback')]/../following-sibling::div//span[@class='a-offscreen']");
 
-    // Delivery info to Bulgaria also inside same container
+    // Selector to verify delivery to Bulgaria within the first result
     private By deliveryToBulgaria = By.xpath(".//span[contains(text(),'Delivers to Bulgaria')]");
 
     public SearchResultsPage(WebDriver driver) {
@@ -41,7 +41,6 @@ public class SearchResultsPage extends BasePage {
     public String getRatingStars() {
         WebElement container = waitForElementVisible(firstSearchResultContainer);
         WebElement ratingElement = container.findElement(ratingStars);
-        // The rating is in aria-label; we remove trailing text after a comma
         return ratingElement.getAttribute("aria-label").replaceAll(",.*", "").trim();
     }
 
@@ -53,8 +52,7 @@ public class SearchResultsPage extends BasePage {
     public String getPaperbackPrice() {
         WebElement container = waitForElementVisible(firstSearchResultContainer);
         WebElement priceElement = container.findElement(paperbackPrice);
-        String price = priceElement.getAttribute("innerText").trim();
-        return price;
+        return priceElement.getAttribute("innerText").trim();
     }
 
     public boolean isDeliveryToBulgariaAvailable() {

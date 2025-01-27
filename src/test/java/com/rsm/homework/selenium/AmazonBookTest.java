@@ -26,7 +26,6 @@ public class AmazonBookTest {
         homePage.dismissGlowToasterIfPresent();
 
         SearchResultsPage resultsPage = homePage
-                .selectBooksCategory()
                 .searchForBook("harry potter and the cursed child 1 and 2")
                 .waitForResults();
 
@@ -55,34 +54,34 @@ public class AmazonBookTest {
         // Verify delivery to Bulgaria
         Assertions.assertTrue(resultsPage.isDeliveryToBulgariaAvailable(), "Delivery to Bulgaria not available");
 
-        // Click on the Paperback version
+        // Proceed to click on the Paperback version
         ProductPage productPage = resultsPage.clickOnPaperbackVersion();
         productPage.waitForProductPageToLoad();
 
-//        // Verify product page title
-//        Assertions.assertTrue(
-//                productPage.getProductTitle().contains("Harry Potter and the Cursed Child"),
-//                "Incorrect product title on Product Page"
-//        );
-//
-//        // Verify price on Product Page matches
-//        Assertions.assertEquals(paperbackPrice, productPage.getPrice(), "Price mismatch on Product Page");
-//
-//        // Verify it's the Paperback edition
-//        Assertions.assertTrue(productPage.isPaperbackEdition(), "Not paperback edition on Product Page");
-//
-//        // Add to basket and mark as gift
-//        productPage.addToBasket().markAsGift();
-//
-//        // Proceed to Cart Page
-//        CartPage cartPage = productPage.goToCart().waitForCartPageToLoad();
-//
-//        // Verify cart item title
-//        Assertions.assertTrue(cartPage.getCartItemTitle().contains("Harry Potter and the Cursed Child"), "Cart title mismatch");
-//
-//        // Verify cart item price
-//        Assertions.assertEquals(paperbackPrice, cartPage.getCartItemPrice(), "Cart price mismatch");
-//
+        // Verify product page title
+        Assertions.assertTrue(
+                productPage.getProductTitle().contains("Harry Potter and the Cursed Child - Parts One and Two: The Official Playscript of the Original West End Production"),
+                "Incorrect product title on Product Page"
+        );
+
+        // Verify price on Product Page matches
+        Assertions.assertEquals(paperbackPrice, productPage.getPrice(), "Price mismatch on Product Page");
+
+        // Verify it's the Paperback edition
+        Assertions.assertTrue(productPage.isPaperbackEdition(), "Not paperback edition on Product Page");
+
+        // Add to basket and mark as gift
+        productPage.addToBasket().markAsGift();
+
+        // Proceed to Cart Page
+        CartPage cartPage = productPage.goToCart().waitForCartPageToLoad();
+
+        // Verify cart item title
+        Assertions.assertTrue(cartPage.getCartItemTitle().contains("Harry Potter and the Cursed Child"), "Cart title mismatch");
+
+        // Verify cart item price
+        Assertions.assertEquals(paperbackPrice, cartPage.getCartItemPrice(), "Cart price mismatch");
+
 //        // Verify edition is Paperback in cart
 //        Assertions.assertTrue(cartPage.isPaperbackInDescription(), "Edition in cart not paperback");
 //
