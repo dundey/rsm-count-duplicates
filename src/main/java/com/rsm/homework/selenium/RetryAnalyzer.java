@@ -13,10 +13,9 @@ public class RetryAnalyzer implements TestExecutionExceptionHandler {
         if (retryCount < MAX_RETRY) {
             retryCount++;
             System.out.println("Retrying test " + context.getDisplayName() + " - attempt " + retryCount);
-            // Re-run the test method
             throw throwable;
         } else {
-            throw throwable; // fail after max retries
+            throw throwable;
         }
     }
 }

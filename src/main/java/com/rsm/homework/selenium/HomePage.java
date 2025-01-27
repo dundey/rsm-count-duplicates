@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage {
 
-    private By amazonLogoContainer = By.id("nav-logo");
-    private By searchTextBox = By.id("twotabsearchtextbox");
-    private By searchButton  = By.id("nav-search-submit-button");
+    private final By amazonLogoContainer = By.id("nav-logo");
+    private final By searchTextBox = By.id("twotabsearchtextbox");
+    private final By searchButton  = By.id("nav-search-submit-button");
 
     public HomePage(WebDriver driver) {
         super(driver);

@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 
 public class ProductPage extends BasePage {
 
-    private By productTitle       = By.id("productTitle");
-    private By productSubtitle    = By.id("productSubtitle");
-    private By paperbackPrice     = By.cssSelector("#tmm-grid-swatch-PAPERBACK .slot-price .a-size-base.a-color-price");
-    private By addToCartButton    = By.id("add-to-cart-button");
-    private By giftCheckbox       = By.name("is-gift");
+    private final By productTitle       = By.id("productTitle");
+    private final By productSubtitle    = By.id("productSubtitle");
+    private final By paperbackPrice     = By.cssSelector("#tmm-grid-swatch-PAPERBACK .slot-price .a-size-base.a-color-price");
+    private final By addToCartButton    = By.id("add-to-cart-button");
+    private final By giftCheckbox       = By.name("is-gift");
 
     public ProductPage(WebDriver driver) {
         super(driver);

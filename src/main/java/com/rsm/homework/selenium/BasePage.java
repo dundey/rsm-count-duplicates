@@ -14,13 +14,12 @@ public class BasePage {
     protected WebDriverWait wait;
 
     // Cookie and glow-toaster locators
-    private By cookieForm      = By.id("sp-cc");
-    private By cookieAcceptBtn = By.id("sp-cc-accept");
-    private By glowDismissBtn  = By.xpath("//span[contains(@class,'glow-toaster-button-dismiss')]//input[@data-action-type='DISMISS']");
+    private final By cookieForm      = By.id("sp-cc");
+    private final By cookieAcceptBtn = By.id("sp-cc-accept");
+    private final By glowDismissBtn  = By.xpath("//span[contains(@class,'glow-toaster-button-dismiss')]//input[@data-action-type='DISMISS']");
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        // Increased wait time to 120 seconds
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(120));
     }
 

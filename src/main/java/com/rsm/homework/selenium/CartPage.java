@@ -8,10 +8,10 @@ import java.util.List;
 
 public class CartPage extends BasePage {
 
-    private By cartItemTitle = By.cssSelector(".sc-product-title");
-    private By cartItemPrice = By.cssSelector(".sc-price");
-    private By giftIndicator = By.cssSelector(".sc-gift-option .sc-gift-option-selected");
-    private By cartItems     = By.cssSelector(".sc-list-item");
+    private final By cartItemTitle = By.cssSelector(".sc-product-title");
+    private final By cartItemPrice = By.cssSelector(".sc-price");
+    private final By giftIndicator = By.cssSelector(".sc-gift-option .sc-gift-option-selected");
+    private final By cartItems     = By.cssSelector(".sc-list-item");
 
     public CartPage(WebDriver driver) {
         super(driver);
