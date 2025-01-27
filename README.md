@@ -2,11 +2,14 @@
 
 ## Tasks
 1. **Duplicate Counter**: Count duplicates in arrays.
-    - Location: `src/main/java/com/rsm/homework/duplicates/`
+   - **Implementation:** `src/main/java/com/rsm/homework/duplicates/`
+   - **Tests:** `src/test/java/com/rsm/homework/duplicates/`
 2. **Amazon Books**: Automate book purchase validation.
-    - Location: `src/main/java/com/rsm/homework/selenium/`
+   - **Implementation:** `src/main/java/com/rsm/homework/selenium/`
+   - **Tests:** `src/test/java/com/rsm/homework/selenium/`
 3. **Performance Testing**: Simulate high-concurrency workloads.
-    - Location: `src/main/java/com/rsm/homework/threads/`
+   - **Implementation:** `src/main/java/com/rsm/homework/threads/`
+   - **Tests:** `src/test/java/com/rsm/homework/threads/`
 
 ### Prerequisites
 - **Java 17+** (check: `java -version`)
